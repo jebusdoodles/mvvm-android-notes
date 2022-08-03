@@ -7,8 +7,7 @@ class DeleteNote(
     private val repository: NoteRepository
 ) {
 
-    suspend operator fun invoke(note: Note){
+    suspend operator fun invoke(note: Note) {
         repository.deleteNote(note)
     }
-
 }

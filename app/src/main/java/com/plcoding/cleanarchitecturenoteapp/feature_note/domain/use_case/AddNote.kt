@@ -8,11 +8,11 @@ class AddNote(
     private val repository: NoteRepository
 ) {
     @Throws(InvalidNoteException::class)
-    suspend operator fun invoke(note: Note){
-        if(note.title.isBlank()){
+    suspend operator fun invoke(note: Note) {
+        if(note.title.isBlank()) {
             throw InvalidNoteException("El titulo de la nota no puede estar vacio")
         }
-        if (note.content.isBlank()){
+        if(note.content.isBlank()) {
             throw InvalidNoteException("El contenido de la nota no puede estar vacio")
         }
         repository.insertNote(note)

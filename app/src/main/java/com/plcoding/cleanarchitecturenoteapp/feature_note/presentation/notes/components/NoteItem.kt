@@ -62,7 +62,7 @@ fun NoteItem(
         }
         Column(
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxSize()
                 .padding(16.dp)
                 .padding(end = 32.dp)
         ) {
@@ -88,7 +88,8 @@ fun NoteItem(
         ) {
             Icon(
                 imageVector = Icons.Default.Delete,
-                contentDescription = "Eliminar nota"
+                contentDescription = "Eliminar nota",
+                tint = MaterialTheme.colors.onSurface
             )
         }
     }
