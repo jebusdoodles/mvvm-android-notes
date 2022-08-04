@@ -57,7 +57,7 @@ fun NoteScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Tu nota",
+                    text = "Tus Notas",
                     style = MaterialTheme.typography.h4
                 )
                 IconButton(
@@ -105,7 +105,7 @@ fun NoteScreen(
                             viewModel.onEvent(NotesEvent.DeleteNote(note))
                             scope.launch {
                                 val result = scaffoldState.snackbarHostState.showSnackbar(
-                                    message = "Nota eliminada",
+                                    message = "La nota ha sido eliminada",
                                     actionLabel = "Undo"
                                 )
                                 if(result == SnackbarResult.ActionPerformed){
