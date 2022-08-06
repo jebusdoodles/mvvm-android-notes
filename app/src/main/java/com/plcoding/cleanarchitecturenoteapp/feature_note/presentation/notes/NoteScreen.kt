@@ -49,7 +49,7 @@ fun NoteScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
+                .padding(20.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -57,7 +57,7 @@ fun NoteScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Tus Notas",
+                    text = "Notas",
                     style = MaterialTheme.typography.h4
                 )
                 IconButton(
@@ -67,7 +67,7 @@ fun NoteScreen(
                 ) {
                     Icon(
                         imageVector = Icons.Default.Sort,
-                        contentDescription = "Sort"
+                        contentDescription = "Ordenar"
                     )
                 }
             }
@@ -79,14 +79,14 @@ fun NoteScreen(
                 OrderSection(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 16.dp),
+                        .padding(vertical = 20.dp),
                     noteOrder = state.noteOrder,
                     onOrderChange = {
                         viewModel.onEvent(NotesEvent.Order(it))
                     }
                 )
             }
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             LazyColumn(
                 modifier = Modifier.fillMaxSize()
             ){
